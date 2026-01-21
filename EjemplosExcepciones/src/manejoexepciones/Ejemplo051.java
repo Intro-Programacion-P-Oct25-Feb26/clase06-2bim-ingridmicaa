@@ -28,6 +28,14 @@ public class Ejemplo051 {
 
                 System.out.printf("Resultado %d\n", resultado);
                 bandera = false;
+                /*
+                Tenemos primero una bandera que se la declara como verdadera,
+                despues creamos un ciclo while, aqui ingresamos los valores
+                si solo son numeros enteres se presenta en resultado y bandera 
+                se vuelve falsa y sale del ciclo, si se ingresa un tec¡xto ira 
+                directamente a catch y se ejercutaran esas lineas y vuelve al cilo
+                While pq nunca paso por bandera.
+                */
             } catch (InputMismatchException inputMismatchException) {
 
                 System.out.printf("Existe un error de tipo %s\n",
