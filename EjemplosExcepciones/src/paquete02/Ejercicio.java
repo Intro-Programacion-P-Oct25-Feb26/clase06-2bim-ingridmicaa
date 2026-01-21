@@ -15,42 +15,44 @@ public class Ejercicio {
 
         int valor1 = ingresarValor();
         int valor2 = ingresarValor();
-        imprimir();
-        obtenerSuma();
+        int suma = obtenerSuma(valor1, valor2);
+
+        imprimir(valor1, valor2, suma);
 
     }
 
     public static int ingresarValor() {
         boolean bandera = true;
+        int valor1 = 0;
         while (bandera) {
             try {
-                int valor1;
-                int valor2;
-                System.out.println("Ingrese valor 1:");
+
+                System.out.println("Ingrese valor:");
                 valor1 = entrada.nextInt();
-                System.out.println("Ingrese valor 2:");
-                valor2 = entrada.nextInt();
-                
-                if (valor1 % 2 == 0 || valor2 % 2 == 0) {
-                    
-                }
-                bandera= false;
-                }
 
+                if (valor1 % 2 != 0) {
+                    throw new Exception("No números impares");
+                }
+                if (valor1 < 0) {
+                    throw new Exception("No números impares");
+                }
+                bandera = false;
+
+            } catch (Exception e) {
+                System.out.printf("Valor no permitido Error: %s", e);
             }
-        return 
+
         }
-
-    
-
-    
-
-    
-
-    public static void imprimir() {
-
+        return valor1;
     }
 
-    public static int obtenerSuma() {
-
+    public static int obtenerSuma(int a, int b) {
+        int suma = a + b;
+        return suma;
     }
+
+    public static void imprimir(int a, int b, int c) {
+        System.out.printf("La suma de %s y %s es de:", a, b, c);
+    }
+
+}
