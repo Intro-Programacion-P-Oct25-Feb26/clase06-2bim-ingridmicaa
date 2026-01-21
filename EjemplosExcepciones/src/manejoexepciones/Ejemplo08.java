@@ -26,6 +26,10 @@ public class Ejemplo08 {
             System.out.printf("Resultado %.2f", resultado2);
         }
         catch(Exception e){
+            /*
+            El catch Exception sirve para capturar todos los errores que existan
+            en java dentro del còdigo.
+            */
             
             System.out.printf(" Lo sentimos hay un error de tipo %s\n", e);
         
